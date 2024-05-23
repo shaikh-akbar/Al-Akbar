@@ -1,11 +1,18 @@
-const { default: mongoose } = require("mongoose")
+const mongoose = require('mongoose');
 
-const dbConnect = () => {
+const dbConnect = async () => {
     try {
-        const conn= mongoose.connect(process.env.MONGODB_URL)
-        console.log('Database connected')
+        // Use await to ensure the connection is established before proceeding
+        await mongoose.connect(process.env.MONGODB_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 30000 
+        });
+        console.log('Database connected');
     } catch (error) {
-        console.log('Database eroor')
+        // Log the actual error for better debugging
+        console.error('Database connection error:', error);
     }
-}
+};
+
 module.exports = dbConnect;

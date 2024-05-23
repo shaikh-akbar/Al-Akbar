@@ -11,5 +11,8 @@
         "src": "/(.*)",
         "dest": "/"
       }
-    ]
+    ],
+    "env": {
+      "MONGODB_URL": "@mongodb-url" 
+    }
   }
