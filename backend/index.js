@@ -16,7 +16,7 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 const cookieParser = require('cookie-parser')
 // const path = require('path')
 const morgan = require('morgan');
-const { checkRazorpayAPIAccess } = require('./testRazorpayAPI');
+// const { checkRazorpayAPIAccess } = require('./testRazorpayAPI');
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
 
