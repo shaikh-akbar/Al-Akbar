@@ -59,7 +59,7 @@ const removeProductFromCart = async (cartItemId) =>{
 
 const getCart = async () => {
     try {
-      const response = await axios.get(`${base_url}user/cart`, config);
+      const response = await axios.get(`${base_url}user/cart`,config);
       console.log(response); // Log the response
       if (response.data) {
         return response.data;

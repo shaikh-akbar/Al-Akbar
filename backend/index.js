@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 4000;
 
 
 dbConnect();
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const corsOptions = {
   origin: 'https://al-akbar.vercel.app', 
   credentials: true,
