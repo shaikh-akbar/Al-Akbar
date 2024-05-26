@@ -6,10 +6,7 @@
         "use": "@vercel/node"
       }
     ],
-    "functions": {
-      "controllers/*.js": { "maxDuration": 60 },
-      "middleware/**/*.js": { "maxDuration": 60 }
-    },
+    
     "routes": [
       {
         "src": "/(.*)",
