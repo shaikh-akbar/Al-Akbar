@@ -14,7 +14,7 @@ const couponRouter = require('./routes/couponRoutes')
 const bodyParser = require('body-parser');
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 const cookieParser = require('cookie-parser')
-const path = require('path')
+// const path = require('path')
 const morgan = require('morgan');
 const { checkRazorpayAPIAccess } = require('./testRazorpayAPI');
 const cors = require("cors");
@@ -47,10 +47,10 @@ app.use('/api/enquiry', enquiryRouter)
 // app.use(notFound)
 // app.use(errorHandler)
 
-app.get('/',(req,res)=>{
-  app.use(express.static(path.resolve(__dirname,"frontend","build")))
-  res.sendFile(path.resolve(__dirname,"frontend","build","index.html"))
-})
+// app.get('/',(req,res)=>{
+//   app.use(express.static(path.resolve(__dirname,"frontend","build")))
+//   res.sendFile(path.resolve(__dirname,"frontend","build","index.html"))
+// })
 
 app.listen(PORT, () => {
   console.log(`server is ronning on Port ${PORT}`)
